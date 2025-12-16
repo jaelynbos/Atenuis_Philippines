@@ -7,19 +7,16 @@
 #SBATCH --mail-user=jbos@ucsc.edu
 #SBATCH --mail-type=ALL
 #SBATCH --mem=200G
-#SBATCH --partition=256x44
+#SBATCH --partition=lab-mpinsky
+#SBATCH --account=pi-mpinsky
+#SBATCH --qos=pi-mpinsky
 
 # this script will do all trimming, except 5'
 # no merging of overlapping reads
 # this is first step in prepping reads for de novo assembly
-#enable_lmod
-#module load container_env pire_genome_assembly/2021.07.01
-# this code is requires if the input files don't live within your own parent directory
-# modify "e1garcia" to the user ID where the files are located
-#export SINGULARITY_BIND= merged_lanes
 
 INDIR=raw_repaired                
-OUTDIR=../../scratch/jbos/fastp_out
+OUTDIR=/hb/jbos/scratch/jbos/fastp_out
 FQPATTERN=*.fq.gz
 EXTPATTERN=[FR]\.fq\.gz
 FWDEXT=F.fq.gz
