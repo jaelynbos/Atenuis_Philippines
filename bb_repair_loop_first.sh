@@ -6,7 +6,10 @@
 #SBATCH --mail-type=ALL
 #SBATCH --cpus-per-task=16
 #SBATCH --mem=180G
-#SBATCH --partition=256x44
+#SBATCH --partition=lab-mpinsky
+#SBATCH --account=pi-mpinsky
+#SBATCH --qos=pi-mpinsky
+
 #SBATCH --time=24:00:00
 
 #Required software: bbtools
