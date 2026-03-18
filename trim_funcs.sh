@@ -15,8 +15,8 @@
 # no merging of overlapping reads
 # this is first step in prepping reads for de novo assembly
 
-INDIR=raw_repaired                
-OUTDIR=/hb/jbos/scratch/jbos/fastp_out
+INDIR=/home/jbos/merged_lanes                
+OUTDIR=/scratch/jbos/fastp_out
 FQPATTERN=*.fq.gz
 EXTPATTERN=[FR]\.fq\.gz
 FWDEXT=F.fq.gz
@@ -55,6 +55,3 @@ ls $INDIR/$FQPATTERN | \
 		--trim_poly_x \
 		--dedup\
 		--report_title "First Trim 4 De Novo" 
-#run multiqc 
-#multiqc $OUTDIR -n $OUTDIR/1st_fastp_report --interactive
-#multiqc -v -p -ip -f --data-dir --data-format tsv --cl-config "max_table_rows: 3000" --filename 1st_fastp_report --outdir $OUTDIR $OUTDIR
