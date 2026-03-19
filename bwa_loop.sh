@@ -14,19 +14,7 @@
 REF=atenuis_ncbi.fna 
 bwa index $REF
 
-#for file in $(ls -v fp_repaired/*.clmp.fp2_r2.fq.gz)
-#do
-#   sample=$(basename "$file" .clmp.fp2_r2.fq.gz)
-#	rg_string='@RG\tID:'$sample'\.1\tSM:'$sample'\tPL:illumina\tLB:1\tPU:1'
-#	echo "Sample ID: $sample"
-#	bwa mem \
-#		-M \
-#		-R $rg_string \
-#		$REF \
-#		fp_repaired/$sample.clmp.fp2_r1.fq.gz fp_repaired/$sample.clmp.fp2_r2.fq.gz > fp_repaired/$sample.sam
-#done
-
-for file in $(ls -v /hb/jbosscratch/jbos/trim2/*.fp2_r1.fq.gz)
+for file in $(ls -v /scratch/jbos/repaired2/*.fp2_r1.fq.gz)
 do
     sample=$(basename "$file" .fp2_r1.fq.gz)
 	rg_string='@RG\tID:'$sample'\.1\tSM:'$sample'\tPL:illumina\tLB:1\tPU:1'
@@ -35,5 +23,5 @@ do
 		-M \
 		-R $rg_string \
 		$REF \
-		/hb/scratch/jbos/trim2/$sample.fp2_r1.fq.gz /hb/scratch/jbos/trim2/$sample.fp2_r2.fq.gz > /hb/scratch/jbos/samfiles/$sample.sam
+		/scratch/jbos/repaired2/$sample.fp2_r1.fq.gz /scratch/jbos/repaired2/$sample.fp2_r2.fq.gz > /hb/scratch/jbos/samfiles/$sample.sam
 done
