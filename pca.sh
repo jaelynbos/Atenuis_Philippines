@@ -11,11 +11,13 @@
 #SBATCH --account=pi-mpinsky
 #SBATCH --qos=pi-mpinsky
 
+module load plink2
 
-plink2 --vcf /hb/scratch/jbos/combined_snps/vcf_thinned500bp.recode.vcf --allow-extra-chr --pca --out ../../scratch/jbos/combined_snps/pca_500bp
+cd /scratch/jbos/combined_snps_copy
+plink2 --vcf pruned_snps.vcf --allow-extra-chr --pca --out pca_pruned
 
 cd /hb/scratch/jbos/cladocopium
-plink2 --vcf vcf_thinned500bp.recode.vcf --allow-extra-chr --pca --out pca_500bp
+plink2 --vcf pruned_snps.vcf --allow-extra-chr --pca --out pca_pruned
 
 cd /hb/scratch/jbos/spp1
 plink2 --vcf vcf_thinned500bp.recode.vcf --allow-extra-chr --pca --out pca_500bp
