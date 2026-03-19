@@ -11,6 +11,8 @@
 #SBATCH --mem=180G
 #SBATCH --time=12:00:00
 
+module load samtools
+
 for file in $(ls -v /scratch/jbos/cladocopium_bam_sorted/*.bam)
 
 do
