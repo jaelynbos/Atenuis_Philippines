@@ -11,6 +11,10 @@
 #SBATCH --account=pi-mpinsky
 #SBATCH --qos=pi-mpinsky
 
+module load fastp
+module load multiqc
+module load parallel
+
 INDIR=/hb/scratch/jbos/clumpify               
 OUTDIR=/hb/scratch/jbos/trim2
 
