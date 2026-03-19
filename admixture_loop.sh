@@ -12,18 +12,16 @@
 
 module load admixture
 
-cd /hb/scratch/jbos/combined_snps
-pwd
+cd /hb/scratch/jbos/cladocopium
 
 for i in {1..16}
 do
- admixture --cv all_taxa_500bp_int_thinned.bed $i > log${i}.out
+ admixture --cv admix.bed $i > log${i}.out
 done
 
-cd /hb/scratch/jbos/cladocopium
-pwd
+cd /scratch/jbos/combined_snps_copy
 
 for i in {1..16}
 do
- admixture --cv cladocopium_500bp_int_thinned.bed $i > log${i}.out
+ admixture --cv admix.bed $i > log${i}.out
 done
