@@ -442,18 +442,18 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 17,
+   "execution_count": 16,
    "id": "e0906e8b-560d-464e-bd62-946aa26aaa55",
    "metadata": {},
    "outputs": [],
    "source": [
-    "#Make taxon 4 dataset with one clone excluded\n",
+    "#Make taxon 4 dataset without parent/offspring triad\n",
     "genind4b<-genind4[!(indNames(genind4) %in% c('CEB01_T12'))]"
    ]
   },
   {
    "cell_type": "code",
-   "execution_count": 18,
+   "execution_count": 17,
    "id": "b060a4ad-e594-41d4-955b-3c453173fca0",
    "metadata": {},
    "outputs": [],
@@ -469,7 +469,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 19,
+   "execution_count": 18,
    "id": "32b4e9e4-5fe0-4377-9de6-2bf8bb0e6c0a",
    "metadata": {},
    "outputs": [
@@ -497,7 +497,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 20,
+   "execution_count": 19,
    "id": "75c14283-1ff8-478d-b717-48315f660d0e",
    "metadata": {},
    "outputs": [
@@ -584,7 +584,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 21,
+   "execution_count": 20,
    "id": "11154f52-95eb-45bb-962c-2cdc1f63b13f",
    "metadata": {},
    "outputs": [
@@ -628,7 +628,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 22,
+   "execution_count": 21,
    "id": "74aacace-92f6-4b65-8508-552d05b3d8e4",
    "metadata": {},
    "outputs": [
@@ -712,7 +712,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 23,
+   "execution_count": 22,
    "id": "29c10d5c-e77f-4ba4-938f-343ff06698e0",
    "metadata": {},
    "outputs": [
@@ -749,7 +749,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 24,
+   "execution_count": 23,
    "id": "aad37ede-47b5-41ea-80d2-21befe1e1480",
    "metadata": {},
    "outputs": [
@@ -774,7 +774,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 25,
+   "execution_count": 24,
    "id": "56ed2fa8-19c3-4283-ac3c-9628b0110cc7",
    "metadata": {},
    "outputs": [],
@@ -789,7 +789,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 26,
+   "execution_count": 25,
    "id": "6621e072-4e3a-4085-832e-e1b6dfbb4990",
    "metadata": {},
    "outputs": [
@@ -2926,7 +2926,7 @@
     "print(final_plot)\n",
     "\n",
     "# Save the plot\n",
-    "ggsave(\"Atenuis_Fig3.pdf\", final_plot, width = 7, height = 10, dpi = 800)"
+    "ggsave(\"combined_ibd_plot_8panel.jpg\", final_plot, width = 7, height = 10, dpi = 800)"
    ]
   }
  ],
