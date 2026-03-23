@@ -15,4 +15,16 @@ Reads are de-multiplexed and merged across lanes. Bioinformatic procssing should
    a. For _Cladocopium_, align to reference using bwa_cladocopium.sh
    b. For _Durusdinium_, align to reference using bwa_cladocopium.sh
    c. For _Symbiodinium_, align to reference using bwa_cladocopium.sh
-7. 
+6. Convert samfiles to bamfiles with sam2bam.sh
+7. Sort bamfiles with bamsort.sh
+8. Add indices with samtools_index_loop.sh
+   
+##Compare read percentages of different symbionts
+Calculate distance to shore for every sample with shoredist_calc.sh and shoredist.py
+
+Calculate number of reads mapped to each reference genuis with mappingrate_loop.sh
+
+Then compare and make figures with Symbiodiniaceae_ReadMapping.ipynb
+
+##Analyze genetic variation in Acropora
+
