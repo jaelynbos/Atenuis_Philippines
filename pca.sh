@@ -20,13 +20,13 @@ cd /hb/scratch/jbos/cladocopium
 plink2 --vcf pruned_snps.vcf --allow-extra-chr --pca --out pca_pruned
 
 cd /hb/scratch/jbos/spp1
-plink2 --vcf vcf_thinned500bp.recode.vcf --allow-extra-chr --pca --out pca_500bp
+plink2 --vcf pruned_snps.recode.vcf --allow-extra-chr --pca --out pca_500bp
 
 cd /hb/scratch/jbos/spp2
-plink2 --vcf vcf_thinned500bp.recode.vcf --allow-extra-chr --pca --out pca_500bp
+plink2 --vcf pruned_snps.recode.vcf --allow-extra-chr --pca --out pca_500bp
 
 cd /hb/scratch/jbos/spp3
-plink2 --vcf vcf_thinned500bp.recode.vcf --allow-extra-chr --pca --out pca_500bp
+plink2 --vcf pruned_snps.recode.vcf --allow-extra-chr --pca --out pca_500bp
 
 cd /hb/scratch/jbos/spp4
-plink2 --vcf vcf_thinned500bp.recode.vcf --allow-extra-chr --pca --out pca_500bp
+plink2 --vcf pruned_snps.recode.vcf --allow-extra-chr --pca --out pca_500bp
