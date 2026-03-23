@@ -26,5 +26,23 @@ Calculate number of reads mapped to each reference genuis with mappingrate_loop.
 
 Then compare and make figures with Symbiodiniaceae_ReadMapping.ipynb
 
-## Analyze genetic variation in Acropora
+## Analyze genetic variation in _Acropora_
+
+Filter all SNPs together with snp_filter_all2.sh (requires depth_1stfilt.py and depth_lastfilt.py). 
+Prune SNPs with snp_pruning.sh
+
+Change chromosome names in vcf in order to run ADMIXTURE with vcf2bed.sh
+Run ADMIXTURE with admixture_loop.sh
+
+Compare taxa using DAPC and make figures using PCA_DAPC_ADMIXTURE.ipynb
+
+Split into cryptic taxa with cryptic_split.sh
+
+Bootstrap across taxa with fst_bootstrap_batch2.sh and fst_bootstrap_noreplacement.R
+
+Calculate heterozygosity by taxon with heterozygosity.sh
+
+Check read mapping and depth by taxon with Atenuis_PopGenBasics.ipynb 
+
+## Isolation by distance in _Acropora_
 
