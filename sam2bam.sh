@@ -13,6 +13,7 @@
 
 module load samtools 
 
+for file in $(ls -v /scratch/jbos/samfiles/*.sam)
 do
     sample=$(basename "$file" | cut -d. -f1)
 	samtools view -b -F 2308 /scratch/jbos/samfiles/$sample.sam> /scratch/jbos/samfiles/$sample.bam 
@@ -24,5 +25,4 @@ do
 	samtools view -b -F 2308 /scratch/jbos/cladocopium_sam/$sample.sam> /scratch/jbos/cladocopium_sam/$sample.bam 
 done
 
-for file in $(ls -v /scratch/jbos/samfiles/*.sam)
 
