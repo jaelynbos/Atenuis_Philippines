@@ -42,7 +42,7 @@ sitecounts<-left_join(sitecounts,counts4)
 sitecounts[is.na(sitecounts)]<-0
 sitecounts$sum <- rowSums(sitecounts[,4:7])
 sitecounts<-sitecounts[sitecounts$sum>0,]
-ggmap::register_google("AIzaSyBSDRX2dDlggJr4ApEnuMftXXRQ_1WGPKs",write=TRUE)
+ggmap::register_google("APIKEY",write=TRUE)
 philippines<-get_googlemap(center=c(lon=124.4,lat=10.4),zoom=8,maptype="terrain",style = c('feature:administrative|element:labels|visibility:off'))
 philippines2<-get_googlemap(center=c(lon=124,lat=12),zoom=6,maptype="satellite",style = c('feature:administrative|element:labels|visibility:off'))
 
