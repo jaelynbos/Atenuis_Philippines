@@ -4,7 +4,7 @@ All code is associated with the mansucript _Contrasting patterns of seascape gen
 
 Genetic data available on NCBI [link to follow]
 
-##Data pre-processing.
+## Data pre-processing.
 Reads are de-multiplexed and merged across lanes. Bioinformatic procssing should be conducted using the following scripts in order:
 
 1. First trim using trim_funcs.sh. Requires: Fastp, Parallel, and Multiqc.
@@ -19,12 +19,12 @@ Reads are de-multiplexed and merged across lanes. Bioinformatic procssing should
 7. Sort bamfiles with bamsort.sh
 8. Add indices with samtools_index_loop.sh
    
-##Compare read percentages of different symbionts
+## Compare read percentages of different symbionts
 Calculate distance to shore for every sample with shoredist_calc.sh and shoredist.py
 
 Calculate number of reads mapped to each reference genuis with mappingrate_loop.sh
 
 Then compare and make figures with Symbiodiniaceae_ReadMapping.ipynb
 
-##Analyze genetic variation in Acropora
+## Analyze genetic variation in Acropora
 
