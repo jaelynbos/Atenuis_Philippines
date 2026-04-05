@@ -48,9 +48,9 @@ Reads dowloaded from NCBI are de-multiplexed and merged across lanes. Bioinforma
 3.9 Calculate heterozygosity by taxon with heterozygosity.sh. \
 3.10 Check read mapping and depth by taxon with Atenuis_PopGenBasics.ipynb. \
 3.11 Filter SNPs separately for each cryptic taxon with: \
-&emsp;snp_filter_spp1.sh \ 
-&emsp;snp_filter_spp2.sh \  
-&emsp;snp_filter_spp3.sh \ 
+&emsp;snp_filter_spp1.sh \
+&emsp;snp_filter_spp2.sh \ 
+&emsp;snp_filter_spp3.sh \
 &emsp;snp_filter_spp4.sh \
 3.12 Prune SNPs for linkage disequilibrium with snp_pruning.sh. This produces all of the individual taxon .vcf files in the 'vcfs' folder (pruned_snps_1.vcf through pruned_snps_4.vcf)
 
