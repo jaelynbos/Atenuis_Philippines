@@ -44,8 +44,8 @@ Reads dowloaded from NCBI are de-multiplexed and merged across lanes. Bioinforma
 2.3 Compare and make figures with Symbiodiniaceae_ReadMapping.ipynb. This produces Supplemental Figure #2.
 
 ### 3. Analyze genetic variation in _Acropora_
-3.1 Filter all SNPs together with snp_filter_all2.sh (requires depth_1stfilt.py and depth_lastfilt.py). \ 
-3.2 Prune SNPs for linkage disequilibrium with snp_pruning.sh. This produced combined_snps_pruned.vcf. \ 
+3.1 Filter all SNPs together with snp_filter_all2.sh (requires depth_1stfilt.py and depth_lastfilt.py). \
+3.2 Prune SNPs for linkage disequilibrium with snp_pruning.sh. This produced combined_snps_pruned.vcf. \
 3.3 Change chromosome names in vcf in order to run ADMIXTURE with vcf2bed.sh \
 3.4 Run ADMIXTURE with admixture_loop.sh \
 3.5 Compare taxa using DAPC and make figures using PCA_DAPC_ADMIXTURE.ipynb. This produces figure 2. \
@@ -63,7 +63,7 @@ Reads dowloaded from NCBI are de-multiplexed and merged across lanes. Bioinforma
 
 ### 4. Isolation by distance in _Acropora_
 4.1 Check for possible clones using KING kinship coefficient with find_clones.sh \
-4.2 Analyze isolation by distance with Atenuis_IsolationByDistance.ipynb. This outputs figure 3. \ 
+4.2 Analyze isolation by distance with Atenuis_IsolationByDistance.ipynb. This outputs figure 3. \
 4.3 Look for relatives with sequoia.ipynb. \
 4.4 Map putative parents and offspring with kin_map.R. This is used to create Figure 4.
 
