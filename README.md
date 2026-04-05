@@ -2,6 +2,13 @@
 This repo uses RADSeq data sequenced from samples of _Acropora cf. tenuis_ corals to explore lanscape genetics in both corals and their algal symbionts.
 All code is associated with the mansucript _Contrasting patterns of seascape genetics in_ Acropora cf. tenuis _and their symbiotic algae_ (in prep). 
 
+The README is organized into three sections:
+A) Data availability \
+B) Bioninformatic pre-processing \
+C) Analysis \
+
+All pre-processing, mapping, and  analysis was run on the University of California's high performance computing clusters 'Hummingbird' and 'Elkhorn'.
+
 ## Data availability
 Raw reads from RAD sequencing are available for download on NCBI at https://www.ncbi.nlm.nih.gov/sra/PRJNA1445311.
 
@@ -14,8 +21,7 @@ This metadata is additionally available on GEOME (https://n2t.net/ark:/21547/R26
 
 Reference genomes were downloaded from NCBI and are additionally available in the 'genome references' folder.
 
-## Scripts and analysis 
-### 1. Bioinformatic pre-processing
+## Bioinformatic pre-processing
 Reads dowloaded from NCBI are de-multiplexed and merged across lanes. Bioinformatic procssing should be conducted using the following scripts in order:
 
 1.1 First trim using trim_funcs.sh. Requires: Fastp, Parallel, and Multiqc. \
@@ -30,7 +36,8 @@ Reads dowloaded from NCBI are de-multiplexed and merged across lanes. Bioinforma
 1.7 Sort bamfiles with bamsort.sh \
 1.8 Add indices with samtools_index_loop.sh \
 1.9 Call SNPs for with freebayes_parallel.sh
-    
+
+## Analysis 
 ### 2. Compare genomic reads aligning to each symbiont genus
 2.1 Calculate distance to shore for every sample with shoredist_calc.sh and shoredist.py \
 2.2 Calculate number of reads mapped to each reference genuis with mappingrate_loop.sh \
