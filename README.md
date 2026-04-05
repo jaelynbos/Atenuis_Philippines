@@ -15,7 +15,7 @@ This metadata is additionally available on GEOME (https://n2t.net/ark:/21547/R26
 Reference genomes were downloaded from NCBI and are additionally available in the 'genome references' folder. 
 
 ## Scripts and analysis 
-# 1. Bioinformatic pre-processing
+### 1. Bioinformatic pre-processing
 Reads dowloaded from NCBI are de-multiplexed and merged across lanes. Bioinformatic procssing should be conducted using the following scripts in order:
 
 1.1 First trim using trim_funcs.sh. Requires: Fastp, Parallel, and Multiqc.
@@ -31,22 +31,18 @@ Reads dowloaded from NCBI are de-multiplexed and merged across lanes. Bioinforma
 1.8 Add indices with samtools_index_loop.sh
 1.9 Call SNPs for with freebayes_parallel.sh
     
-# 2. Compare genomic reads aligning to each symbiont genus
+### 2. Compare genomic reads aligning to each symbiont genus
 2.1 Calculate distance to shore for every sample with shoredist_calc.sh and shoredist.py
 2.2 Calculate number of reads mapped to each reference genuis with mappingrate_loop.sh
 2.3 Compare and make figures with Symbiodiniaceae_ReadMapping.ipynb. This produces Supplemental Figure #2. 
 
-## Analyze genetic variation in _Acropora_
-
-Filter all SNPs together with snp_filter_all2.sh (requires depth_1stfilt.py and depth_lastfilt.py). 
-Prune SNPs for linkage disequilibrium with snp_pruning.sh
-
-Change chromosome names in vcf in order to run ADMIXTURE with vcf2bed.sh
-Run ADMIXTURE with admixture_loop.sh
-
-Compare taxa using DAPC and make figures using PCA_DAPC_ADMIXTURE.ipynb
-
-Split into cryptic taxa with cryptic_split.sh
+### 3. Analyze genetic variation in _Acropora_
+3.1 Filter all SNPs together with snp_filter_all2.sh (requires depth_1stfilt.py and depth_lastfilt.py). 
+3.2 Prune SNPs for linkage disequilibrium with snp_pruning.sh. This produced combined_snps_pruned.vcf. 
+3.3 Change chromosome names in vcf in order to run ADMIXTURE with vcf2bed.sh
+3.4 Run ADMIXTURE with admixture_loop.sh
+3.5 Compare taxa using DAPC and make figures using PCA_DAPC_ADMIXTURE.ipynb. This produces figure 2.
+3.6 Split samples into cryptic taxa with cryptic_split.sh
 
 Bootstrap across taxa with fst_bootstrap_batch2.sh and fst_bootstrap_noreplacement.R
 
@@ -55,21 +51,21 @@ Calculate heterozygosity by taxon with heterozygosity.sh
 Check read mapping and depth by taxon with Atenuis_PopGenBasics.ipynb 
 
 Filter SNPs separately for each cryptic taxon with 
-snp_filter_spp1.sh
-snp_filter_spp2.sh
-snp_filter_spp3.sh
-snp_filter_spp4.sh
+snp_filter_spp1.sh. This produces pruned_snps_1.vcf
+snp_filter_spp2.sh  This produces pruned_snps_2.vcf
+snp_filter_spp3.sh  This produces pruned_snps_3.vcf
+snp_filter_spp4.sh  This produces pruned_snps_4.vcf
 
 Prune SNPs for linkage disequilibrium with snp_pruning.sh
 
-## Isolation by distance in _Acropora_
+### Isolation by distance in _Acropora_
 Check for possible clones using KING kinship coefficient with find_clones.sh
 
 Analyze isolation by distance with Atenuis_IsolationByDistance.ipynb
 
 Look for relatives with sequoia.ipynb
 
-## Analyze genetic variation in _Cladocopium_
+### Analyze genetic variation in _Cladocopium_
 Change chromosome names in vcf in order to run ADMIXTURE with vcf2bed.sh
 Run ADMIXTURE with admixture_loop.sh
 
