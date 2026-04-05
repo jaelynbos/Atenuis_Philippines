@@ -7,29 +7,29 @@ Raw reads from RAD sequencing are available for download on NCBI at https://www.
 
 Genotype calls are additionally available in .vcf format. These are available in the 'vcfs' folder. 
 
-Two metadata files are available in the 'metadat' folder. all_Atenuis_sites.csv contains latitude and longitude coordinates (WGS84) for each sampling site. 
+Two metadata files are available in the 'metadat' folder. all_Atenuis_sites.csv contains latitude and longitude coordinates (WGS84) for each sampling site.\ 
 metadata_shoredist.csv includes finer resolution latitude and longitude coordinates extracted from GPS tracks for a subset of the samples (not all sampling days had a working GPS unit available), as well as oceanic depth for a subset of the samples.   
 
 This metadata is additionally available on GEOME (https://n2t.net/ark:/21547/R2686). 
 
-Reference genomes were downloaded from NCBI and are additionally available in the 'genome references' folder. 
+Reference genomes were downloaded from NCBI and are additionally available in the 'genome references' folder.
 
 ## Scripts and analysis 
 ### 1. Bioinformatic pre-processing
 Reads dowloaded from NCBI are de-multiplexed and merged across lanes. Bioinformatic procssing should be conducted using the following scripts in order:
 
-1.1 First trim using trim_funcs.sh. Requires: Fastp, Parallel, and Multiqc.
-1.2 Deduplicate using clump_batch.bash to run clumpify.sh. Requires: Clumpify.
-1.3 Second trim using trim_funcs2.sh. Requires: Fastp, Parallel, and Multiqc.
-1.4 Re-pair unpaired reads using repair_2.sh. Requires: BBtools
-1.5 Map genes to _Acropora_ reference using bwa_loop.sh. Requires: BWA
-   a. For _Cladocopium_, align to reference using bwa_cladocopium.sh
-   b. For _Durusdinium_, align to reference using bwa_cladocopium.sh
-   c. For _Symbiodinium_, align to reference using bwa_symbiodinium.sh
-1.6 Convert samfiles to bamfiles with sam2bam.sh
-1.7 Sort bamfiles with bamsort.sh
-1.8 Add indices with samtools_index_loop.sh
-1.9 Call SNPs for with freebayes_parallel.sh
+1.1 First trim using trim_funcs.sh. Requires: Fastp, Parallel, and Multiqc.\
+1.2 Deduplicate using clump_batch.bash to run clumpify.sh. Requires: Clumpify.\
+1.3 Second trim using trim_funcs2.sh. Requires: Fastp, Parallel, and Multiqc.\
+1.4 Re-pair unpaired reads using repair_2.sh. Requires: BBtools\
+1.5 Map genes to _Acropora_ reference using bwa_loop.sh. Requires: BWA\
+   a. For _Cladocopium_, align to reference using bwa_cladocopium.sh\
+   b. For _Durusdinium_, align to reference using bwa_cladocopium.sh\
+   c. For _Symbiodinium_, align to reference using bwa_symbiodinium.sh\
+1.6 Convert samfiles to bamfiles with sam2bam.sh\
+1.7 Sort bamfiles with bamsort.sh\
+1.8 Add indices with samtools_index_loop.sh\
+1.9 Call SNPs for with freebayes_parallel.sh\
     
 ### 2. Compare genomic reads aligning to each symbiont genus
 2.1 Calculate distance to shore for every sample with shoredist_calc.sh and shoredist.py
