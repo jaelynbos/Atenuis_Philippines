@@ -43,20 +43,15 @@ Reads dowloaded from NCBI are de-multiplexed and merged across lanes. Bioinforma
 3.4 Run ADMIXTURE with admixture_loop.sh
 3.5 Compare taxa using DAPC and make figures using PCA_DAPC_ADMIXTURE.ipynb. This produces figure 2.
 3.6 Split samples into cryptic taxa with cryptic_split.sh
-
-Bootstrap across taxa with fst_bootstrap_batch2.sh and fst_bootstrap_noreplacement.R
-
-Calculate heterozygosity by taxon with heterozygosity.sh
-
-Check read mapping and depth by taxon with Atenuis_PopGenBasics.ipynb 
-
-Filter SNPs separately for each cryptic taxon with 
-snp_filter_spp1.sh. This produces pruned_snps_1.vcf
-snp_filter_spp2.sh  This produces pruned_snps_2.vcf
-snp_filter_spp3.sh  This produces pruned_snps_3.vcf
-snp_filter_spp4.sh  This produces pruned_snps_4.vcf
-
-Prune SNPs for linkage disequilibrium with snp_pruning.sh
+3.7 Calculate bootstrapped FSTs across taxa with fst_bootstrap_batch2.sh and fst_bootstrap_noreplacement.R. Check results with fst_Acropora_taxa.ipynb. 
+3.8 Calculate heterozygosity by taxon with heterozygosity.sh.
+3.9 Check read mapping and depth by taxon with Atenuis_PopGenBasics.ipynb.
+3.10 Filter SNPs separately for each cryptic taxon with 
+   snp_filter_spp1.sh. 
+   snp_filter_spp2.sh.  
+   snp_filter_spp3.sh. 
+   snp_filter_spp4.sh.
+3.11 Prune SNPs for linkage disequilibrium with snp_pruning.sh. This produces all of the individual taxon .vcf files in the 'vcfs' folder (pruned_snps_1.vcf through pruned_snps_4.vcf)
 
 ### Isolation by distance in _Acropora_
 Check for possible clones using KING kinship coefficient with find_clones.sh
