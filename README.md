@@ -47,7 +47,7 @@ Reads dowloaded from NCBI are de-multiplexed and merged across lanes. Bioinforma
 3.8 Calculate bootstrapped FSTs across taxa with fst_bootstrap_batch2.sh and fst_bootstrap_noreplacement.R. Check results with fst_Acropora_taxa.ipynb. \ 
 3.9 Calculate heterozygosity by taxon with heterozygosity.sh. \
 3.10 Check read mapping and depth by taxon with Atenuis_PopGenBasics.ipynb. \
-3.11 Filter SNPs separately for each cryptic taxon with \
+3.11 Filter SNPs separately for each cryptic taxon with: \
    snp_filter_spp1.sh \ 
    snp_filter_spp2.sh \  
    snp_filter_spp3.sh \ 
@@ -55,14 +55,14 @@ Reads dowloaded from NCBI are de-multiplexed and merged across lanes. Bioinforma
 3.12 Prune SNPs for linkage disequilibrium with snp_pruning.sh. This produces all of the individual taxon .vcf files in the 'vcfs' folder (pruned_snps_1.vcf through pruned_snps_4.vcf)
 
 ### 4. Isolation by distance in _Acropora_
-4.1 Check for possible clones using KING kinship coefficient with find_clones.sh\
-4.2 Analyze isolation by distance with Atenuis_IsolationByDistance.ipynb. This outputs figure 3.\ 
-4.3 Look for relatives with sequoia.ipynb.
-4.4 Map putative parents and offspring with kin_map.R. This is used to create Figure 4.\ 
+4.1 Check for possible clones using KING kinship coefficient with find_clones.sh \
+4.2 Analyze isolation by distance with Atenuis_IsolationByDistance.ipynb. This outputs figure 3. \ 
+4.3 Look for relatives with sequoia.ipynb. \
+4.4 Map putative parents and offspring with kin_map.R. This is used to create Figure 4.
 
 ### 5. Analyze genetic variation in _Cladocopium_
-5.1 Change chromosome names in vcf in order to run ADMIXTURE with vcf2bed.sh\
-5.2 Run ADMIXTURE with admixture_loop_cladocopium.sh\ 
-5.3 Bootstrap across taxa with fst_bootstrap_batch2.sh and fst_bootstrap_noreplacement.R. Visualize results with fst_Cladocopium_taxa.ipynb.\
-5.4 Visualized PCA and ADMIXTURE and check for differences in Cladocopium genotypes between _Acropora_ taxa with Cladocopium.ipynb. This ouptuts Figure 5.\
-5.5 Look for isolation by distance with Cladocopium_IbD.ipynb. This outputs Figure 6.\
+5.1 Change chromosome names in vcf in order to run ADMIXTURE with vcf2bed.sh \
+5.2 Run ADMIXTURE with admixture_loop_cladocopium.sh \ 
+5.3 Bootstrap across taxa with fst_bootstrap_batch2.sh and fst_bootstrap_noreplacement.R. Visualize results with fst_Cladocopium_taxa.ipynb. \
+5.4 Visualized PCA and ADMIXTURE and check for differences in Cladocopium genotypes between _Acropora_ taxa with Cladocopium.ipynb. This ouptuts Figure 5. \
+5.5 Look for isolation by distance with Cladocopium_IbD.ipynb. This outputs Figure 6.
