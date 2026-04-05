@@ -51,7 +51,7 @@ Reads dowloaded from NCBI are de-multiplexed and merged across lanes. Bioinforma
 3.5 Compare taxa using DAPC and make figures using PCA_DAPC_ADMIXTURE.ipynb. This produces figure 2. \
 3.6 Split samples into cryptic taxa with cryptic_split.sh \
 3.7 Map distribution of taxa across sampling sites with sampling_map.R \
-3.8 Calculate bootstrapped FSTs across taxa with fst_bootstrap_batch2.sh and fst_bootstrap_noreplacement.R. Check results with fst_Acropora_taxa.ipynb. \ 
+3.8 Calculate bootstrapped FSTs across taxa with fst_bootstrap_batch2.sh and fst_bootstrap_noreplacement.R. Check results with fst_Acropora_taxa.ipynb. \
 3.9 Calculate heterozygosity by taxon with heterozygosity.sh. \
 3.10 Check read mapping and depth by taxon with Atenuis_PopGenBasics.ipynb. \
 3.11 Filter SNPs separately for each cryptic taxon with: \
