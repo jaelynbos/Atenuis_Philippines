@@ -32,26 +32,26 @@ Reads dowloaded from NCBI are de-multiplexed and merged across lanes. Bioinforma
 1.9 Call SNPs for with freebayes_parallel.sh
     
 ### 2. Compare genomic reads aligning to each symbiont genus
-2.1 Calculate distance to shore for every sample with shoredist_calc.sh and shoredist.py\
-2.2 Calculate number of reads mapped to each reference genuis with mappingrate_loop.sh\
-2.3 Compare and make figures with Symbiodiniaceae_ReadMapping.ipynb. This produces Supplemental Figure #2.\ 
+2.1 Calculate distance to shore for every sample with shoredist_calc.sh and shoredist.py \
+2.2 Calculate number of reads mapped to each reference genuis with mappingrate_loop.sh \
+2.3 Compare and make figures with Symbiodiniaceae_ReadMapping.ipynb. This produces Supplemental Figure #2.
 
 ### 3. Analyze genetic variation in _Acropora_
-3.1 Filter all SNPs together with snp_filter_all2.sh (requires depth_1stfilt.py and depth_lastfilt.py).\ 
-3.2 Prune SNPs for linkage disequilibrium with snp_pruning.sh. This produced combined_snps_pruned.vcf.\ 
-3.3 Change chromosome names in vcf in order to run ADMIXTURE with vcf2bed.sh\
-3.4 Run ADMIXTURE with admixture_loop.sh\
-3.5 Compare taxa using DAPC and make figures using PCA_DAPC_ADMIXTURE.ipynb. This produces figure 2.\
-3.6 Split samples into cryptic taxa with cryptic_split.sh\
-3.7 Map distribution of taxa across sampling sites with sampling_map.R\
-3.8 Calculate bootstrapped FSTs across taxa with fst_bootstrap_batch2.sh and fst_bootstrap_noreplacement.R. Check results with fst_Acropora_taxa.ipynb.\ 
-3.9 Calculate heterozygosity by taxon with heterozygosity.sh.\
-3.10 Check read mapping and depth by taxon with Atenuis_PopGenBasics.ipynb.\
+3.1 Filter all SNPs together with snp_filter_all2.sh (requires depth_1stfilt.py and depth_lastfilt.py). \ 
+3.2 Prune SNPs for linkage disequilibrium with snp_pruning.sh. This produced combined_snps_pruned.vcf. \ 
+3.3 Change chromosome names in vcf in order to run ADMIXTURE with vcf2bed.sh \
+3.4 Run ADMIXTURE with admixture_loop.sh \
+3.5 Compare taxa using DAPC and make figures using PCA_DAPC_ADMIXTURE.ipynb. This produces figure 2. \
+3.6 Split samples into cryptic taxa with cryptic_split.sh \
+3.7 Map distribution of taxa across sampling sites with sampling_map.R \
+3.8 Calculate bootstrapped FSTs across taxa with fst_bootstrap_batch2.sh and fst_bootstrap_noreplacement.R. Check results with fst_Acropora_taxa.ipynb. \ 
+3.9 Calculate heterozygosity by taxon with heterozygosity.sh. \
+3.10 Check read mapping and depth by taxon with Atenuis_PopGenBasics.ipynb. \
 3.11 Filter SNPs separately for each cryptic taxon with \
-   snp_filter_spp1.sh\ 
-   snp_filter_spp2.sh\  
-   snp_filter_spp3.sh\ 
-   snp_filter_spp4.sh\
+   snp_filter_spp1.sh \ 
+   snp_filter_spp2.sh \  
+   snp_filter_spp3.sh \ 
+   snp_filter_spp4.sh \
 3.12 Prune SNPs for linkage disequilibrium with snp_pruning.sh. This produces all of the individual taxon .vcf files in the 'vcfs' folder (pruned_snps_1.vcf through pruned_snps_4.vcf)
 
 ### 4. Isolation by distance in _Acropora_
