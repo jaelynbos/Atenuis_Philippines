@@ -23,9 +23,9 @@ Reads dowloaded from NCBI are de-multiplexed and merged across lanes. Bioinforma
 1.3 Second trim using trim_funcs2.sh. Requires: Fastp, Parallel, and Multiqc. \
 1.4 Re-pair unpaired reads using repair_2.sh. Requires: BBtools \
 1.5 Map genes to _Acropora_ reference using bwa_loop.sh. Requires: BWA \
-   a. For _Cladocopium_, align to reference using bwa_cladocopium.sh \
-   b. For _Durusdinium_, align to reference using bwa_cladocopium.sh \
-   c. For _Symbiodinium_, align to reference using bwa_symbiodinium.sh \
+&emsp;a. For _Cladocopium_, align to reference using bwa_cladocopium.sh \
+&emsp;b. For _Durusdinium_, align to reference using bwa_cladocopium.sh \
+&emsp;c. For _Symbiodinium_, align to reference using bwa_symbiodinium.sh \
 1.6 Convert samfiles to bamfiles with sam2bam.sh \
 1.7 Sort bamfiles with bamsort.sh \
 1.8 Add indices with samtools_index_loop.sh \
@@ -48,10 +48,10 @@ Reads dowloaded from NCBI are de-multiplexed and merged across lanes. Bioinforma
 3.9 Calculate heterozygosity by taxon with heterozygosity.sh. \
 3.10 Check read mapping and depth by taxon with Atenuis_PopGenBasics.ipynb. \
 3.11 Filter SNPs separately for each cryptic taxon with: \
-   snp_filter_spp1.sh \ 
-   snp_filter_spp2.sh \  
-   snp_filter_spp3.sh \ 
-   snp_filter_spp4.sh \
+&emsp;snp_filter_spp1.sh \ 
+&emsp;snp_filter_spp2.sh \  
+&emsp;snp_filter_spp3.sh \ 
+&emsp;snp_filter_spp4.sh \
 3.12 Prune SNPs for linkage disequilibrium with snp_pruning.sh. This produces all of the individual taxon .vcf files in the 'vcfs' folder (pruned_snps_1.vcf through pruned_snps_4.vcf)
 
 ### 4. Isolation by distance in _Acropora_
