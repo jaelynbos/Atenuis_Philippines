@@ -14,7 +14,7 @@ Raw reads from RAD sequencing are available for download on NCBI at https://www.
 
 Genotype calls are additionally available in .vcf format. These are available in the 'vcfs' folder. 
 
-Two metadata files are available in the 'metadat' folder. all_Atenuis_sites.csv contains latitude and longitude coordinates (WGS84) for each sampling site. \ 
+Two metadata files are available in the 'metadat' folder. all_Atenuis_sites.csv contains latitude and longitude coordinates (WGS84) for each sampling site. \
 metadata_shoredist.csv includes finer resolution latitude and longitude coordinates extracted from GPS tracks for a subset of the samples (not all sampling days had a working GPS unit available), as well as oceanic depth for a subset of the samples.   
 
 This metadata is additionally available on GEOME (https://n2t.net/ark:/21547/R2686). 
