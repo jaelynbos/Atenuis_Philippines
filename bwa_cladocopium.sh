@@ -11,7 +11,8 @@
 #SBATCH --account=pi-mpinsky
 #SBATCH --time=24:00:00
 
-REF=/hb/home/jbos/ncbi/cladocopium_ncbi.fna
+#Reference downloaded from https://www.ncbi.nlm.nih.gov/datasets/genome/GCA_947184155.2/
+REF= Cgoreaui_SCF055-01_v2.1.fna
 bwa index $REF
 
 for file in $(ls -v /scratch/jbos/repaired2/*.fp2_r1.fq.gz)

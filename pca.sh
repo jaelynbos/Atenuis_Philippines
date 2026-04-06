@@ -13,7 +13,7 @@
 
 module load plink2
 
-cd /scratch/jbos/combined_snps_copy
+cd /scratch/jbos/combined_snps
 plink2 --vcf pruned_snps.vcf --allow-extra-chr --pca --out pca_pruned
 
 cd /hb/scratch/jbos/cladocopium

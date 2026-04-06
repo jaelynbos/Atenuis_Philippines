@@ -11,7 +11,9 @@
 #SBATCH --account=pi-mpinsky
 #SBATCH --time=24:00:00
 
-REF=Symbiodinium_kawaguitii.fna
+#Reference genome downloaded from https://www.ncbi.nlm.nih.gov/datasets/genome/GCA_009767595.1/, GenBank assembly GCA_009767595.1
+
+REF=ASM976759v1.fna
 bwa index $REF
 
 INDIR=/scratch/jbos/repaired2

@@ -13,16 +13,19 @@
 
 module load samtools 
 
-for file in $(ls -v /scratch/jbos/samfiles/*.sam)
+DIR_ACROPORA=/scratch/jbos/samfiles
+DIR_CLADOCOPIUM=/scratch/jbos/cladocopium_sam
+
+for file in $(ls -v $DIR_ACROPORA/*.sam)
 do
     sample=$(basename "$file" | cut -d. -f1)
-	samtools view -b -F 2308 /scratch/jbos/samfiles/$sample.sam> /scratch/jbos/samfiles/$sample.bam 
+	samtools view -b -F 2308 $DIR_ACROPORA/$sample.sam> $DIR_ACROPORA/$sample.bam 
 done
 
-for file in $(ls -v /scratch/jbos/cladocopium_sam/*.sam)
+for file in $(ls -v $DIR_CLADOCOPIUM/*.sam)
 do
     sample=$(basename "$file" | cut -d. -f1)
-	samtools view -b -F 2308 /scratch/jbos/cladocopium_sam/$sample.sam> /scratch/jbos/cladocopium_sam/$sample.bam 
+	samtools view -b -F 2308 $DIR_CLADOCOPIUM/$sample.sam> $DIR_CLADOCOPIUM/$sample.bam 
 done
 
 

@@ -11,7 +11,9 @@
 #SBATCH --qos=pi-mpinsky
 #SBATCH --time=24:00:00
 
-REF=atenuis_ncbi.fna 
+#Reference genome downloaded from https://www.ncbi.nlm.nih.gov/datasets/genome/GCA_014633955.1/, submitted GenBank assembly GCA_014633955.1
+REF=Aten_1.0.fna
+
 bwa index $REF
 
 INDIR=/scratch/jbos/repaired2

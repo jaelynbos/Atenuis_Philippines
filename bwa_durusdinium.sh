@@ -11,7 +11,9 @@
 #SBATCH --account=pi-mpinsky
 #SBATCH --time=24:00:00
 
-REF=/Durusdinium_trenchii.fna
+#Reference genome downloaded from https://www.ncbi.nlm.nih.gov/datasets/genome/GCA_963970005.1/,  GenBank assembly GCA_963970005.1
+
+REF=Durusdinium_trenchii_CCMP2556.fna
 bwa index $REF
 
 INDIR=/scratch/jbos/repaired2
