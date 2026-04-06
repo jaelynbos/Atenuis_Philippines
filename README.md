@@ -2,7 +2,7 @@
 This repo uses RADSeq data sequenced from samples of _Acropora cf. tenuis_ corals to explore lanscape genetics in both corals and their algal symbionts.
 All code is associated with the mansucript _Contrasting patterns of seascape genetics in_ Acropora cf. tenuis _and their symbiotic algae_ (in prep). 
 
-The README is organized into three sections: \
+The README is organized into four sections: \
 A) Data availability \
 B) Required software \
 C) Bioninformatic pre-processing \
