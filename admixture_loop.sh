@@ -19,7 +19,7 @@ do
  admixture --cv admix.bed $i > log${i}.out
 done
 
-cd /scratch/jbos/combined_snps_copy
+cd /scratch/jbos/combined_snps
 
 for i in {1..16}
 do

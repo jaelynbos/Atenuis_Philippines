@@ -16,8 +16,8 @@ export LANGUAGE=C
 export LC_ALL=C
 export LANG=C
 
-INDIR=/scratch/jbos/bamfiles_sorted
-OUTDIR=/scratch/jbos/combined_snps
+INDIR=/scratch/jbos/cladocopium_bam_sorted
+OUTDIR=/scratch/jbos/cladocopium_bam_sorted
 
 samples=$(ls -v $INDIR/*.bam)
- freebayes-parallel <(fasta_generate_regions.py atenuis_ncbi.fna 80000) 16 --ploidy 2 -f atenuis_ncbi.fna ${samples} > $OUTDIR/parallel_samples2.vcf
+ freebayes-parallel <(fasta_generate_regions.py cladocopium_ncbi.fna 80000) 16 --ploidy 1 -f cladocopium_ncbi.fna ${samples} > $OUTDIR/cladocopium_snps.vcf

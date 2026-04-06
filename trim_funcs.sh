@@ -15,7 +15,6 @@ module load fastp
 module load multiqc
 module load parallel
 
-
 # this script will do all trimming, except 5'
 # no merging of overlapping reads
 # this is first step in prepping reads for de novo assembly

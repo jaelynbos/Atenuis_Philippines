@@ -13,15 +13,15 @@
 
 module load vcftools
 
-cd /scratch/jbos/spp1_copy/
+cd /scratch/jbos/spp1/
 vcftools  --vcf pruned_snps.vcf --het --out taxa1_het
 
-cd /scratch/jbos/spp2_copy/
+cd /scratch/jbos/spp2/
 vcftools  --vcf pruned_snps.vcf --het --out taxa2_het
 
-cd /scratch/jbos/spp3_copy/
+cd /scratch/jbos/spp3/
 vcftools  --vcf pruned_snps.vcf --het --out taxa3_het
 
-cd /scratch/jbos/spp4_copy/
+cd /scratch/jbos/spp4/
 vcftools  --vcf pruned_snps.vcf --het --out taxa4_het
 

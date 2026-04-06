@@ -13,7 +13,9 @@
 #SBATCH --mail-type=ALL
 #SBATCH --mem=44G
 
-bcftools view -S taxa1_update.txt /hb/scratch/jbos/parallel_samples2.vcf > /scratch/jbos/spp1_copy/unfilt_snps.vcf
-bcftools view -S taxa2_update.txt /hb/scratch/jbos/parallel_samples2.vcf > /scratch/jbos/spp2_copy/unfilt_snps.vcf
-bcftools view -S taxa3_update.txt /hb/scratch/jbos/parallel_samples2.vcf > /scratch/jbos/spp3_copy/unfilt_snps.vcf
-bcftools view -S taxa4_update.txt /hb/scratch/jbos/parallel_samples2.vcf > /scratch/jbos/spp4_copy/unfilt_snps.vcf
+INDIR=/scratch/jbos
+
+bcftools view -S taxa1.txt $INDIR/parallel_samples2.vcf > /scratch/jbos/spp1/unfilt_snps.vcf
+bcftools view -S taxa2.txt $INDIR/parallel_samples2.vcf > /scratch/jbos/spp2/unfilt_snps.vcf
+bcftools view -S taxa3.txt $INDIR/parallel_samples2.vcf > /scratch/jbos/spp3/unfilt_snps.vcf
+bcftools view -S taxa4.txt $INDIR/parallel_samples2.vcf > /scratch/jbos/spp4/unfilt_snps.vcf

@@ -10,11 +10,11 @@
 #SBATCH --account=pi-mpinsky
 #SBATCH --qos=pi-mpinsky
 
-cd /scratch/jbos/spp1_copy
+cd /scratch/jbos/spp1
 plink2 --vcf snps19.recode.vcf --allow-extra-chr --set-missing-var-ids @:# --indep-pairwise 50 5 0.5 --out pruned_data
 plink2 --vcf snps19.recode.vcf --allow-extra-chr --set-missing-var-ids @:# --extract pruned_data.prune.in --export vcf-4.2 --out pruned_snps
 
-cd /scratch/jbos/spp2_copy
+cd /scratch/jbos/spp2
 plink2 --vcf snps19.recode.vcf --allow-extra-chr --set-missing-var-ids @:# --indep-pairwise 50 5 0.5 --out pruned_data
 plink2 --vcf snps19.recode.vcf --allow-extra-chr --set-missing-var-ids @:# --extract pruned_data.prune.in --export vcf-4.2 --out pruned_snps
 
@@ -22,11 +22,11 @@ cd /scratch/jbos/spp3_copy
 plink2 --vcf snps19.recode.vcf --allow-extra-chr --set-missing-var-ids @:# --indep-pairwise 50 5 0.5 --out pruned_data
 plink2 --vcf snps19.recode.vcf --allow-extra-chr --set-missing-var-ids @:# --extract pruned_data.prune.in --export vcf-4.2 --out pruned_snps
 
-cd /scratch/jbos/spp4_copy
+cd /scratch/jbos/spp4
 plink2 --vcf snps19.recode.vcf --allow-extra-chr --set-missing-var-ids @:# --indep-pairwise 50 5 0.5 --out pruned_data
 plink2 --vcf snps19.recode.vcf --allow-extra-chr --set-missing-var-ids @:# --extract pruned_data.prune.in --export vcf-4.2 --out pruned_snps
 
-cd /scratch/jbos/combined_snps_copy
+cd /scratch/jbos/combined_snps
 plink2 --vcf snps21.recode.vcf --allow-extra-chr --set-missing-var-ids @:# --indep-pairwise 50 5 0.5 --out pruned_data
 plink2 --vcf snps21.recode.vcf --allow-extra-chr --set-missing-var-ids @:# --extract pruned_data.prune.in --export vcf-4.2 --out pruned_snps
 

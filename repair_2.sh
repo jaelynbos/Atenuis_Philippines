@@ -13,9 +13,12 @@
 
 module load bbtools
 
-for file1 in $(ls -v /scratch/jbos/trim2/*.fp2_r1.fq.gz)
+INDIR=/scratch/jbos/trim2
+OUTDIR=/scratch/jbos/repaired2
+
+for file1 in $(ls -v $INDIR/*.fp2_r1.fq.gz)
 do
 	name1=$(basename "$file1")
 	name1="${name1%.fp2_r1.fq.gz}"
-	repair.sh in1=/scratch/jbos/trim2/${name1}.fp2_r1.fq.gz in2=/scratch/jbos/trim2/${name1}.fp2_r2.fq.gz out1=repaired2/${name1}.fp2_r1.fq.gz out2=repaired2/${name1}.fp2_r2.fq.gz outs=singletons2/${name1}.fq repair
+	repair.sh in1=$INDIR/${name1}.fp2_r1.fq.gz in2=$INDIR/${name1}.fp2_r2.fq.gz out1=$OUTDIR/${name1}.fp2_r1.fq.gz out2=$OUTDIR/${name1}.fp2_r2.fq.gz outs=singletons2/${name1}.fq repair
 done

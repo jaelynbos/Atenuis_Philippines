@@ -13,16 +13,20 @@
 
 module load samtools
 
-for file in $(ls -v /scratch/jbos/cladocopium_bam_sorted/*.bam)
+ACROPORA_DIR=/scratch/jbos/bam_sorted
+CLADOCOPIUM_DIR=/scratch/jbos/cladocopium_bam_sorted
+
+for file in $(ls -v $ACROPORA_DIR/*.bam)
 
 do
     sample=$(basename "$file" | cut -d. -f1)
-	samtools index -b /scratch/jbos/cladocopium_bam_sorted/$sample.bam /scratch/jbos/cladocopium_bam_sorted/$sample.bai
+	samtools index -b $ACROPORA_DIR/$sample.bam $ACROPORA_DIR/$sample.bai
 done
 
-for file in $(ls -v /scratch/jbos/bam_sorted/*.bam)
+for file in $(ls -v $CLADOCOPIUM_DIR/*.bam)
 
 do
     sample=$(basename "$file" | cut -d. -f1)
-	samtools index -b /scratch/jbos/bam_sorted/$sample.bam /scratch/jbos/bam_sorted/$sample.bai
+	samtools index -b $CLADOCOPIUM_DIR/$sample.bam $CLADOCOPIUM_DIR/$sample.bai
 done
+

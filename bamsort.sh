@@ -11,20 +11,25 @@
 #SBATCH --mem=180G
 #SBATCH --time=03:00:00
 
-mkdir /scratch/jbos/cladocopium_bam_sorted/
+INDIR_ACROPORA=/scratch/jbos/samfiles
+OUTDIR_ACROPORA=/scratch/jbos/bam_sorted
 
-for file in $(ls -v /scratch/jbos/cladocopium_sam/*.bam)
+INDIR_CLADOCOPIUM=/scratch/jbos/cladocopium_sam
+OUTDIR_CLADOCOPIUM=/scratch/jbos/cladocopium_bam_sorted
 
-do
-    sample=$(basename "$file" | cut -d. -f1)
-	samtools sort /scratch/jbos/cladocopium_sam/$sample.bam -o /scratch/jbos/cladocopium_bam_sorted/$sample.bam
-done
-
-mkdir /scratch/jbos/bam_sorted/
-
-for file in $(ls -v /scratch/jbos/samfiles/*.bam)
+for file in $(ls -v $INDIR_ACROPORA/*.bam)
 
 do
     sample=$(basename "$file" | cut -d. -f1)
-	samtools sort /scratch/jbos/samfiles/$sample.bam -o /scratch/jbos/bam_sorted/$sample.bam
+	samtools sort $INDIR_ACROPORA/$sample.bam -o $OUTDIR_ACROPORA/$sample.bam
 done
+
+
+for file in $(ls -v $INDIR_CLADOCOPIUM/*.bam)
+
+do
+    sample=$(basename "$file" | cut -d. -f1)
+	samtools sort $INDIR_CLADOCOPIUM/$sample.bam -o $OUTDIR_CLADOCOPIUM/$sample.bam
+done
+
+
