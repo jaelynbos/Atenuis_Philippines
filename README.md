@@ -34,7 +34,7 @@ Freebayes. https://github.com/freebayes/freebayes \
 Vcftools. https://vcftools.github.io/index.html \
 Vcflib. https://github.com/vcflib/vcflib \
 Plink2. https://www.cog-genomics.org/plink/2.0/ \
-ADMIXTURE. https://dalexander.github.io/admixture/ \
+ADMIXTURE. https://dalexander.github.io/admixture/ 
 
 All software was installed through Conda (including Bioconda and Conda-Forge channels). 
 
