@@ -27,16 +27,16 @@ _Durusdinium trenchii_: https://www.ncbi.nlm.nih.gov/datasets/genome/GCA_9639700
 _Symbiodinium kawagutii_: https://www.ncbi.nlm.nih.gov/datasets/genome/GCA_009767595.1/, GenBank assembly GCA_009767595.1
 
 ## Required software
-Fastp. https://github.com/opengene/fastp \
-Multiqc. https://seqera.io/multiqc/ \
-Parallel. https://www.gnu.org/software/parallel/ \
-BBtools. https://archive.jgi.doe.gov/data-and-tools/software-tools/bbtools/ \
-BWA-mem. https://bio-bwa.sourceforge.net/ \
-Samtools. https://github.com/samtools/samtools \
+Fastp version 0.23.4. https://github.com/opengene/fastp \
+Multiqc version 1.27. https://seqera.io/multiqc/  \
+Parallel version 20200122. https://www.gnu.org/software/parallel/ \
+BBtools version 39.06. https://archive.jgi.doe.gov/data-and-tools/software-tools/bbtools/ \
+BWA-mem version  0.7.17. https://bio-bwa.sourceforge.net/ \
+Samtools version 1.20. https://github.com/samtools/samtools \
 Freebayes. https://github.com/freebayes/freebayes \
 Vcftools. https://vcftools.github.io/index.html \
 Vcflib. https://github.com/vcflib/vcflib \
-Plink2. https://www.cog-genomics.org/plink/2.0/ \
+Plink2 version v2.00a5.10LM. https://www.cog-genomics.org/plink/2.0/ \
 ADMIXTURE. https://dalexander.github.io/admixture/ \
 R version 4.4.1 \
 Python version 3.9.25. 
