@@ -13,14 +13,14 @@ All pre-processing, mapping, and  analysis was run on the University of Californ
 ## Data availability
 Raw reads from RAD sequencing are available for download on NCBI at https://www.ncbi.nlm.nih.gov/sra/PRJNA1445311.
 
-Genotype calls are additionally available in .vcf format. These are available in the 'vcfs' folder. 
+Filtered SNPs are additionally available in .vcf format. These are available in the 'vcfs' directory. Many other intermediate datasets required as inputs for producing analysis and figures with .ipynb R scripts can be found in the other_data directory. 
 
-Two metadata files are available in the 'metadat' folder. all_Atenuis_sites.csv contains latitude and longitude coordinates (WGS84) for each sampling site. \
+Two metadata files are available in the 'metadat' directory. all_Atenuis_sites.csv contains latitude and longitude coordinates (WGS84) for each sampling site. \
 metadata_shoredist.csv includes finer resolution latitude and longitude coordinates extracted from GPS tracks for a subset of the samples (not all sampling days had a working GPS unit available), as well as oceanic depth for a subset of the samples.   
 
 This metadata is additionally available on GEOME (https://n2t.net/ark:/21547/R2686). 
 
-Reference genomes were downloaded from NCBI and are additionally available in the 'genome references' folder.
+Reference genomes were downloaded from NCBI and are additionally available in the 'genome references' directory.
 
 ## Required software
 Fastp. https://github.com/opengene/fastp \
@@ -73,7 +73,7 @@ Reads dowloaded from NCBI are de-multiplexed and merged across lanes. Bioinforma
 &emsp;snp_filter_spp2.sh \
 &emsp;snp_filter_spp3.sh \
 &emsp;snp_filter_spp4.sh \
-2.12 Prune SNPs for linkage disequilibrium with snp_pruning.sh. This produces all of the individual taxon .vcf files in the 'vcfs' folder (pruned_snps_1.vcf through pruned_snps_4.vcf).
+2.12 Prune SNPs for linkage disequilibrium with snp_pruning.sh. This produces all of the individual taxon .vcf files in the 'vcfs' directory (pruned_snps_1.vcf through pruned_snps_4.vcf).
 
 ### 3. Isolation by distance in _Acropora_
 3.1 Check for possible clones using KING kinship coefficient with find_clones.sh. \
