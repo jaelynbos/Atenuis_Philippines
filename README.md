@@ -24,17 +24,17 @@ Reference genomes were downloaded from NCBI and are additionally available in th
 ## Required software
 
 ### Standalone software
-Fastp. https://github.com/opengene/fastp
-Multiqc. https://seqera.io/multiqc/
-Parallel. https://www.gnu.org/software/parallel/
-BBtools. https://archive.jgi.doe.gov/data-and-tools/software-tools/bbtools/
-BWA-mem. https://bio-bwa.sourceforge.net/
-Samtools. https://github.com/samtools/samtools
-Freebayes. https://github.com/freebayes/freebayes
-Vcftools. https://vcftools.github.io/index.html
-Vcflib. https://github.com/vcflib/vcflib
-Plink2. https://www.cog-genomics.org/plink/2.0/
-ADMIXTURE. https://dalexander.github.io/admixture/
+Fastp. https://github.com/opengene/fastp \
+Multiqc. https://seqera.io/multiqc/ \
+Parallel. https://www.gnu.org/software/parallel/ \
+BBtools. https://archive.jgi.doe.gov/data-and-tools/software-tools/bbtools/ \
+BWA-mem. https://bio-bwa.sourceforge.net/ \
+Samtools. https://github.com/samtools/samtools \
+Freebayes. https://github.com/freebayes/freebayes \
+Vcftools. https://vcftools.github.io/index.html \
+Vcflib. https://github.com/vcflib/vcflib \
+Plink2. https://www.cog-genomics.org/plink/2.0/ \
+ADMIXTURE. https://dalexander.github.io/admixture/ \
 
 All software was installed through Conda (including Bioconda and Conda-Forge channels). 
 
