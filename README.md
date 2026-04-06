@@ -23,8 +23,6 @@ This metadata is additionally available on GEOME (https://n2t.net/ark:/21547/R26
 Reference genomes were downloaded from NCBI and are additionally available in the 'genome references' folder.
 
 ## Required software
-
-### Required
 Fastp. https://github.com/opengene/fastp \
 Multiqc. https://seqera.io/multiqc/ \
 Parallel. https://www.gnu.org/software/parallel/ \
