@@ -4,10 +4,11 @@ All code is associated with the mansucript _Contrasting patterns of seascape gen
 
 The README is organized into three sections: \
 A) Data availability \
-B) Bioninformatic pre-processing \
-C) Analysis
+B) Required software \
+C) Bioninformatic pre-processing \
+D) Analysis
 
-All pre-processing, mapping, and  analysis was run on the University of California's high performance computing clusters 'Hummingbird' and 'Elkhorn'. Statistical analysis was conducted in R version 4.4.1 and Python version 3.9.25. 
+All pre-processing, mapping, and  analysis was run on the University of California's high performance computing clusters 'Hummingbird' and 'Elkhorn'. 
 
 ## Data availability
 Raw reads from RAD sequencing are available for download on NCBI at https://www.ncbi.nlm.nih.gov/sra/PRJNA1445311.
@@ -23,7 +24,7 @@ Reference genomes were downloaded from NCBI and are additionally available in th
 
 ## Required software
 
-### Standalone software
+### Required
 Fastp. https://github.com/opengene/fastp \
 Multiqc. https://seqera.io/multiqc/ \
 Parallel. https://www.gnu.org/software/parallel/ \
@@ -34,15 +35,11 @@ Freebayes. https://github.com/freebayes/freebayes \
 Vcftools. https://vcftools.github.io/index.html \
 Vcflib. https://github.com/vcflib/vcflib \
 Plink2. https://www.cog-genomics.org/plink/2.0/ \
-ADMIXTURE. https://dalexander.github.io/admixture/ 
+ADMIXTURE. https://dalexander.github.io/admixture/ \
+R version 4.4.1 \
+Python version 3.9.25. 
 
 All software was installed through Conda (including Bioconda and Conda-Forge channels). 
-
-### R packages
-
-### Python libraries
-
-
 
 ## Bioinformatic pre-processing
 Reads dowloaded from NCBI are de-multiplexed and merged across lanes. Bioinformatic procssing should be conducted using the following scripts in order:
