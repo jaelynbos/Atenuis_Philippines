@@ -20,7 +20,11 @@ metadata_shoredist.csv includes finer resolution latitude and longitude coordina
 
 This metadata is additionally available on GEOME (https://n2t.net/ark:/21547/R2686). 
 
-Reference genomes were downloaded from NCBI and are additionally available in the 'genome references' directory.
+Reference genomes were downloaded from NCBI, at the following links:\
+_Acropora tenuis_: https://www.ncbi.nlm.nih.gov/datasets/genome/GCA_014633955.1/, GenBank assembly GCA_014633955.1
+_Cladocopium goreaui_: https://www.ncbi.nlm.nih.gov/datasets/genome/GCA_947184155.2/, GenBank assembly GCA_947184155.2
+_Durusdinium trenchii_: https://www.ncbi.nlm.nih.gov/datasets/genome/GCA_963970005.1/, GenBank assembly GCA_963970005.1
+_Symbiodinium kawagutii_: https://www.ncbi.nlm.nih.gov/datasets/genome/GCA_009767595.1/, GenBank assembly GCA_009767595.1
 
 ## Required software
 Fastp. https://github.com/opengene/fastp \
