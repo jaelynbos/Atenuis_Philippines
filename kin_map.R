@@ -32,7 +32,7 @@ p_main <- ggmap(philippines, darken = c(0.4, "white")) +
     axis.title.y = element_blank(),
     axis.text.x = element_text(size = 16),
     axis.text.y = element_text(size = 16),
-    legend.text = element_text(size = 22)  # Doubled from default (~11) to 22
+    legend.text = element_text(size = 22)
   ) +
   geom_point(data = rels, aes(x = LONGITUDE, y = LATITUDE, color = Taxon),
              size = 14) +  # Changed to 14

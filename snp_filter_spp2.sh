@@ -12,7 +12,7 @@
 
 #Step 0: Change directory to folder with unfitlered VCF by species
 
-cd /hb/scratch/jbos/spp2_copy
+cd /hb/scratch/jbos/spp2
 
 vcftools --vcf unfilt_snps.vcf --minDP 3 --mac 3 --minQ 20 --recode --recode-INFO-all --out unfilt_snps1
 
