@@ -7,7 +7,7 @@ A) Data availability \
 B) Bioninformatic pre-processing \
 C) Analysis
 
-All pre-processing, mapping, and  analysis was run on the University of California's high performance computing clusters 'Hummingbird' and 'Elkhorn'.
+All pre-processing, mapping, and  analysis was run on the University of California's high performance computing clusters 'Hummingbird' and 'Elkhorn'. Statistical analysis was conducted in R version 4.4.1 and Python version 3.9.25. 
 
 ## Data availability
 Raw reads from RAD sequencing are available for download on NCBI at https://www.ncbi.nlm.nih.gov/sra/PRJNA1445311.
@@ -21,11 +21,34 @@ This metadata is additionally available on GEOME (https://n2t.net/ark:/21547/R26
 
 Reference genomes were downloaded from NCBI and are additionally available in the 'genome references' folder.
 
+## Required software
+
+### Standalone software
+Fastp. https://github.com/opengene/fastp
+Multiqc. https://seqera.io/multiqc/
+Parallel. https://www.gnu.org/software/parallel/
+BBtools. https://archive.jgi.doe.gov/data-and-tools/software-tools/bbtools/
+BWA-mem. https://bio-bwa.sourceforge.net/
+Samtools. https://github.com/samtools/samtools
+Freebayes. https://github.com/freebayes/freebayes
+Vcftools. https://vcftools.github.io/index.html
+Vcflib. https://github.com/vcflib/vcflib
+Plink2. https://www.cog-genomics.org/plink/2.0/
+ADMIXTURE. https://dalexander.github.io/admixture/
+
+All software was installed through Conda (including Bioconda and Conda-Forge channels). 
+
+### R packages
+
+### Python libraries
+
+
+
 ## Bioinformatic pre-processing
 Reads dowloaded from NCBI are de-multiplexed and merged across lanes. Bioinformatic procssing should be conducted using the following scripts in order:
 
 1.1 First trim using trim_funcs.sh. Requires: Fastp, Parallel, and Multiqc. \
-1.2 Deduplicate using clump_batch.bash to run clumpify.sh. Requires: Clumpify. \
+1.2 Deduplicate using clump_batch.bash to run clumpify.sh. Requires: Clumpify (from BBtools). \
 1.3 Second trim using trim_funcs2.sh. Requires: Fastp, Parallel, and Multiqc. \
 1.4 Re-pair unpaired reads using repair_2.sh. Requires: BBtools \
 1.5 Map genes to _Acropora_ reference using bwa_loop.sh. Requires: BWA \
