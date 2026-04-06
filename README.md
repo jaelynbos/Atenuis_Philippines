@@ -37,8 +37,6 @@ ADMIXTURE. https://dalexander.github.io/admixture/ \
 R version 4.4.1 \
 Python version 3.9.25. 
 
-All software was installed through Conda (including Bioconda and Conda-Forge channels). 
-
 ## Bioinformatic pre-processing
 Reads dowloaded from NCBI are de-multiplexed and merged across lanes. Bioinformatic procssing should be conducted using the following scripts in order:
 
