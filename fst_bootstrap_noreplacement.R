@@ -7,7 +7,7 @@ library(hierfstat)
 library(adegenet)
 
 #Bootstrap FSTs between Acropora taxa
-setwd("/scratch/jbos/combined_snps_copy")
+setwd("/scratch/jbos/combined_snps")
 
 vcf<-read.vcfR("pruned_snps.vcf")
 
@@ -15,10 +15,10 @@ gi <- vcfR2genind(vcf)
 
 setwd("/home/jbos")
 
-taxa1<-read_csv('taxa1_update.csv',show_col_types = FALSE)
-taxa2<-read_csv('taxa2_update.csv',show_col_types = FALSE)
-taxa3<-read_csv('taxa3_update.csv',show_col_types = FALSE)
-taxa4<-read_csv('taxa4_update.csv',show_col_types = FALSE)
+taxa1<-read_csv('taxa1.csv',show_col_types = FALSE)
+taxa2<-read_csv('taxa2.csv',show_col_types = FALSE)
+taxa3<-read_csv('taxa3.csv',show_col_types = FALSE)
+taxa4<-read_csv('taxa4.csv',show_col_types = FALSE)
 
 inds<-as.data.frame(matrix(nrow=nrow(gi@tab),ncol=1))
 inds$ind<-rownames(gi@tab)
@@ -60,7 +60,7 @@ while (j < nboot){
 return(boot_fsts)
 }
 
-setwd("/scratch/jbos/combined_snps_copy")
+setwd("/scratch/jbos/combined_snps")
 
 taxa12<-fst_bootstrap(1,2,gi,1000)
 write.csv(taxa12,'acropora12_fst_boot.csv')
