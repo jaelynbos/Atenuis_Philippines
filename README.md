@@ -32,7 +32,7 @@ Multiqc version 1.27. https://seqera.io/multiqc/  \
 Parallel version 20200122. https://www.gnu.org/software/parallel/ \
 BBtools version 39.06. https://archive.jgi.doe.gov/data-and-tools/software-tools/bbtools/ \
 BWA-mem version  0.7.17. https://bio-bwa.sourceforge.net/ \
-Samtools version 1.20. https://github.com/samtools/samtools \
+SAMtools version 1.20. https://github.com/samtools/samtools \
 Freebayes. https://github.com/freebayes/freebayes \
 Vcftools. https://vcftools.github.io/index.html \
 Vcflib. https://github.com/vcflib/vcflib \
