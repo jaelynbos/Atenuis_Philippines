@@ -1,3 +1,3 @@
-#Directory contents
+## Directory contents
 All files in this directory are associated with the manuscript _Contrasting patterns of seascape genetics in_ Acropora cf. tenuis _and their symbiotic algae_, currently available on BioRXiv at https://www.biorxiv.org/content/10.64898/2026.04.07.716991v1.
 Figure names in the directory exactly correspond to figure names in the manuscript. The manuscript is currently under revision, pending publication, and all figures are subject to change. 
