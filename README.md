@@ -90,8 +90,10 @@ Reads dowloaded from NCBI are de-multiplexed and merged across lanes. Bioinforma
 4.3 Compare and make figures with Symbiodiniaceae_ReadMapping.ipynb. This produces **Supplemental Figure 2**, **Supplemental Table 4** and **Supplemental Table 5**.
 
 ### 5. Analyze genetic variation in _Cladocopium_
-5.1 Change chromosome names in vcf in order to run ADMIXTURE with vcf2bed.sh. \
-5.2 Run ADMIXTURE with admixture_loop_cladocopium.sh. \
-5.3 Bootstrap across taxa with fst_bootstrap_batch2.sh and fst_bootstrap_noreplacement.R. Visualize results with fst_Cladocopium_taxa.ipynb. This produces **Table 2**.\
-5.4 Visualized PCA and ADMIXTURE and check for differences in Cladocopium genotypes between _Acropora_ taxa with Cladocopium.ipynb. This ouptuts **Figure 5**, **Table 3**, **Supplemental Table 1**, and **Supplemental Table 3**. \
-5.5 Look for isolation by distance with Cladocopium_IbD.ipynb. This outputs **Figure 6**, **Supplemental Table 6** and **Supplemental Table 7**.
+5.1 Filter SNPs with cladocopium_filt.sh \
+5.2 Prune SNPs for linkage disequilibrium with snp_pruning_cladocopium.sh \
+5.3 Change chromosome names in vcf in order to run ADMIXTURE with vcf2bed.sh. \
+5.4 Run ADMIXTURE with admixture_loop_cladocopium.sh. \
+5.5 Bootstrap across taxa with fst_bootstrap_batch2.sh and fst_bootstrap_noreplacement.R. Visualize results with fst_Cladocopium_taxa.ipynb. This produces **Table 2**.\
+5.6 Visualized PCA and ADMIXTURE and check for differences in Cladocopium genotypes between _Acropora_ taxa with Cladocopium.ipynb. This ouptuts **Figure 5**, **Table 3**, **Supplemental Table 1**, and **Supplemental Table 3**. \
+5.7 Look for isolation by distance with Cladocopium_IbD.ipynb. This outputs **Figure 6**, **Supplemental Table 6** and **Supplemental Table 7**.
