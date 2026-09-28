@@ -18,7 +18,7 @@ cd /scratch/jbos/spp2
 plink2 --vcf snps19.recode.vcf --allow-extra-chr --set-missing-var-ids @:# --indep-pairwise 50 5 0.5 --out pruned_data
 plink2 --vcf snps19.recode.vcf --allow-extra-chr --set-missing-var-ids @:# --extract pruned_data.prune.in --export vcf-4.2 --out pruned_snps
 
-cd /scratch/jbos/spp3_copy
+cd /scratch/jbos/spp3
 plink2 --vcf snps19.recode.vcf --allow-extra-chr --set-missing-var-ids @:# --indep-pairwise 50 5 0.5 --out pruned_data
 plink2 --vcf snps19.recode.vcf --allow-extra-chr --set-missing-var-ids @:# --extract pruned_data.prune.in --export vcf-4.2 --out pruned_snps
 

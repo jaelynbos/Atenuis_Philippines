@@ -16,17 +16,17 @@ module load plink2
 cd /scratch/jbos/combined_snps
 plink2 --vcf pruned_snps.vcf --allow-extra-chr --pca --out pca_pruned
 
-cd /hb/scratch/jbos/cladocopium
+cd /scratch/jbos/cladocopium
 plink2 --vcf pruned_snps.vcf --allow-extra-chr --pca --out pca_pruned
 
-cd /hb/scratch/jbos/spp1
+cd /scratch/jbos/spp1
 plink2 --vcf pruned_snps.recode.vcf --allow-extra-chr --pca --out pca_pruned
 
-cd /hb/scratch/jbos/spp2
+cd /scratch/jbos/spp2
 plink2 --vcf pruned_snps.recode.vcf --allow-extra-chr --pca --out pca_pruned
 
-cd /hb/scratch/jbos/spp3
+cd /scratch/jbos/spp3
 plink2 --vcf pruned_snps.recode.vcf --allow-extra-chr --pca --out pca_pruned
 
-cd /hb/scratch/jbos/spp4
+cd /scratch/jbos/spp4
 plink2 --vcf pruned_snps.recode.vcf --allow-extra-chr --pca --out pca_pruned
