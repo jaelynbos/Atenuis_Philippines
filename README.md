@@ -81,8 +81,9 @@ Reads dowloaded from NCBI are de-multiplexed and merged across lanes. Bioinforma
 ### 3. Isolation by distance in _Acropora_
 3.1 Check for possible clones using KING kinship coefficient with find_clones.sh. \
 3.2 Analyze isolation by distance with Atenuis_IsolationByDistance.ipynb. This outputs **Figure 3**. \
-3.3 Look for relatives with sequoia.ipynb. This is used to produce **Supplemental Table 8**. \
-3.4 Map putative parents and offspring with kin_map.R. This is used to create **Figure 4**.
+3.3 Prep inputs for sequoia with plink_raw.sh \
+3.4 Look for relatives with sequoia.ipynb. This is used to produce **Supplemental Table 8**. \
+3.5 Map putative parents and offspring with kin_map.R. This is used to create **Figure 4**.
 
 ### 4. Compare genomic reads aligning to each symbiont genus
 4.1 Calculate distance to shore for every sample with shoredist_calc.sh and shoredist.py. \
