@@ -1,0 +1,2 @@
+awk 'NR == FNR { exclude[$0] = 1; next } { split($0, parts, "/"); filename = parts[length(parts)]; gsub(/\..*$/, "", filename); if (!(filename in exclude)) print }' cladocopium_imiss_99 bamlist_cladocopium.txt > filtered_cladocopium_bams.txt
+awk 'NR == FNR { exclude[$0] = 1; next } { split($0, parts, "/"); filename = parts[length(parts)]; gsub(/\..*$/, "", filename); if (!(filename in exclude)) print }' cladocopium_imiss_98 bamlist_cladocopium.txt > filtered_cladocopium_bams98.txt
