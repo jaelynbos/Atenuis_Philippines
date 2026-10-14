@@ -2,11 +2,12 @@
 This repo uses RADSeq data sequenced from samples of _Acropora cf. tenuis_ corals to explore lanscape genetics in both corals and their algal symbionts.
 All code is associated with the mansucript _Contrasting patterns of seascape genetics in_ Acropora cf. tenuis _and their symbiotic algae_ (under revision). 
 
-The README is organized into four sections: \
+The README is organized into five sections: \
 A) Data availability \
 B) Required software \
 C) Bioninformatic pre-processing \
-D) Analysis
+D) Analysis \
+E) Supplementary analysis
 
 All pre-processing, mapping, and  analysis was run on the University of California's high performance computing clusters 'Hummingbird' and 'Elkhorn'. 
 
@@ -98,3 +99,27 @@ Reads dowloaded from NCBI are de-multiplexed and merged across lanes. Bioinforma
 5.5 Bootstrap across taxa with fst_bootstrap_batch2.sh and fst_bootstrap_noreplacement.R. Visualize results with fst_Cladocopium_taxa.ipynb. This produces **Table 2**.\
 5.6 Visualized PCA and ADMIXTURE and check for differences in Cladocopium genotypes between _Acropora_ taxa with Cladocopium.ipynb. This ouptuts **Figure 5**, **Table 3**, **Supplemental Table 1**, and **Supplemental Table 3**. \
 5.7 Look for isolation by distance with Cladocopium_IbD.ipynb. This outputs **Figure 6**, **Supplemental Table 6** and **Supplemental Table 7**.
+
+## Additional analysis to test for sensitivity to missing data
+Many of the samples in this dataset sequenced poorly, meaning that the resulting dataset includes substantial missing data. As missing data can introduce artifacts and errors, we include two forms of additional analysis. In Section 6, we reproduce our major results using only individual samples with <10% missing data. In section 7, we reproduce our results using an alternative pipeline based on Identity by State (IBS) distances and ANGSD. \
+
+### 6. Re-run analyses with subset of samples
+6.1 Change directory to /low_missing_pipeline/ \
+6.2 Filter samples with snp_filt_missing10per.sh \
+6.3 Prune SNPs for linkage with snp_pruning_missing10per.sh \
+6.4 Fix chromosome names for ADMIXTURE with vcf2bed_missing10per.sh \
+6.5 Re-run ADMIXTURE with admixture_loop_missing1-per.sh \
+6.6 Re-run clustering and IBD analysis for _Acropora_ with Analyzing_missingness.ipynb \
+6.7 Re-run IBD analysis for _Cladocopium_ with Analyzing_missingness_Cladocopium.ipynb \
+6.8 Prep files for Sequoia input with plink_raw_missing10per.sh \
+6.9 Run Sequoia with sequoia_missing10per.sh
+
+### 7. Check results with ANGSD and IBS pipeline
+7.1 Change directory to /ANGDS_IBS_methods/ \
+7.2 Make lists of bamfiles for ANGDS input with file_exclusions_angsd.bash and fil_exclusions_angsd_cladocopium.bash \
+7.3 Index reference genomes for ANGSD with angsd_prep.sh \
+7.4 Generate IBS matrix for all _Acropora_ samples with ANGSD_IBS.sh \
+7.5 Generate IBS matrices for each _Acropora_ taxon with ANGSD_IBS_taxon.sh \
+7.6 Generate IBS matrix for all _Cladocopium_ samples with ANGSD_IBS_Cladocopium.sh \
+7.7 Generate IBS matrix for  _Cladocopium_ samples corresponding to each _Acropora_ taxon with ANGSD_IBS_taxon_Cladocopium.sh \
+7.8 View results and make figures with IBS_distances.ipynb
