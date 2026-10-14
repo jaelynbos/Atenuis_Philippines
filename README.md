@@ -108,7 +108,7 @@ Many of the samples in this dataset sequenced poorly, meaning that the resulting
 6.2 Filter samples with snp_filt_missing10per.sh \
 6.3 Prune SNPs for linkage with snp_pruning_missing10per.sh \
 6.4 Fix chromosome names for ADMIXTURE with vcf2bed_missing10per.sh \
-6.5 Re-run ADMIXTURE with admixture_loop_missing1-per.sh \
+6.5 Re-run ADMIXTURE with admixture_loop_missing10per.sh \
 6.6 Re-run clustering and IBD analysis for _Acropora_ with Analyzing_missingness.ipynb \
 6.7 Re-run IBD analysis for _Cladocopium_ with Analyzing_missingness_Cladocopium.ipynb \
 6.8 Prep files for Sequoia input with plink_raw_missing10per.sh \
